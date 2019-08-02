@@ -13,4 +13,16 @@ module.exports = {
 
      return res.json(products)//retorna em uma estrutura JSON javascript object notation
    },
+
+  //definindo novo metodo
+  async store (req, res) {
+    //Criação
+    const product = await Product.create(req.body);//passa todos os campos do corpo da requisição
+
+    //retorna o produto criado na base de dados
+    return res.json(product);
+  
+  }
+
+
 };

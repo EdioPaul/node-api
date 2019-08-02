@@ -5,6 +5,7 @@ const requireDir = require ('require-dir'); // lib para requires automat
 
 // cria var app com função express
 const app = express(); 
+app.use(express.json());//permissão para enviar dados para aplicação via json
 
 
 // conecta ao BD
