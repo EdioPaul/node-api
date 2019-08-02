@@ -1,6 +1,10 @@
-const mongoose = require ('mongoose'); // importa mongoose
+// importa mongoose
+const mongoose = require ('mongoose'); 
 
-const ProductSchema = new mongoose.Schema({ // cria tabela BD
+
+// cria tabela BD
+const ProductSchema = new mongoose.Schema({ 
+    
     //objetos
   title: {
       type: String,
@@ -14,12 +18,14 @@ const ProductSchema = new mongoose.Schema({ // cria tabela BD
       type: String,
       required: true,
   },
+
   //salva momento de cada criação no BD
   createdAt: {
       type: Date,
       default: Date.now,
   },
 });
+
 
 //registra a model(colunas) no BD
 mongoose.model("Product", ProductSchema);

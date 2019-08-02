@@ -1,7 +1,10 @@
 //CRUD
-const mongoose = require ('mongoose');//para trabalhar com o BD
+//para trabalhar com o BD
+const mongoose = require ('mongoose');
 
-const Product = mongoose.model('Product');//importa a model de product
+
+//importa a model de product
+const Product = mongoose.model('Product');
 
 //exporta objeto com algumas funções
 module.exports = {
