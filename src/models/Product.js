@@ -1,5 +1,6 @@
 // importa mongoose
-const mongoose = require ('mongoose'); 
+const mongoose = require ('mongoose'); // importa ORM  (Object Relational Mapping)
+const mongoosePaginate = require ('mongoose-paginate');//import paginate
 
 
 // cria tabela BD
@@ -26,6 +27,7 @@ const ProductSchema = new mongoose.Schema({
   },
 });
 
+ProductSchema.plugin(mongoosePaginate);
 
 //registra a model(colunas) no BD
 mongoose.model("Product", ProductSchema);
